@@ -1,0 +1,216 @@
+.container {
+  min-height: 100vh;
+  background: #0d1117;
+  padding-top: 80px;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 32px;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #8b949e;
+}
+
+.liveIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #8b949e;
+}
+
+.liveDot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.liveDotPing {
+  position: absolute;
+  inset: 0;
+  background: #3fb950;
+  border-radius: 50%;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.liveDotCore {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #3fb950;
+  border-radius: 50%;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Charts Section */
+.chartsSection {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* Live Prices Grid */
+.pricesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 576px) {
+  .pricesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .pricesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricesGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Info Banner */
+.infoBanner {
+  background: rgba(88, 166, 255, 0.05);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 32px;
+}
+
+.infoBannerContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.infoIcon {
+  width: 20px;
+  height: 20px;
+  color: #58a6ff;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoText {
+  font-size: 14px;
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+.infoSubtext {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Empty State */
+.emptyState {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+  background: rgba(88, 166, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.emptyIcon svg {
+  width: 40px;
+  height: 40px;
+  color: #58a6ff;
+}
+
+.emptyTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.emptyText {
+  font-size: 16px;
+  color: #8b949e;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.emptyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #58a6ff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.emptyBtn:hover {
+  background: #79b8ff;
+  transform: translateY(-2px);
+}
+
+.emptyBtn svg {
+  width: 20px;
+  height: 20px;
+}

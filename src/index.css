@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --color-crypto-dark: #0d1117;
+  --color-crypto-darker: #010409;
+  --color-crypto-card: #161b22;
+  --color-crypto-border: #30363d;
+  --color-crypto-accent: #58a6ff;
+  --color-crypto-green: #3fb950;
+  --color-crypto-red: #f85149;
+  --color-crypto-yellow: #d29922;
+  --color-crypto-purple: #8b5cf6;
+  --color-crypto-cyan: #22d3ee;
+  
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-gradient: gradient 8s ease infinite;
+  
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-crypto-dark);
+  color: #e6edf3;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-crypto-card);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-crypto-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Custom utility classes */
+.text-gradient {
+  background-image: linear-gradient(to right, #22d3ee, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.1);
+}

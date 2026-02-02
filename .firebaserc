@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "m24-burger"
+  },
+  "targets": {
+    "m24-burger": {
+      "hosting": {
+        "coinpulse": [
+          "coinpulse"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

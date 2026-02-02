@@ -1,0 +1,231 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 550px;
+  overflow: hidden;
+  padding-top: 70px;
+  /* Parallax background image */
+  background-image: 
+    linear-gradient(rgba(1, 4, 9, 0.7), rgba(13, 17, 23, 0.85)),
+    url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.gradientBg {
+  display: none; /* Hidden - using image instead */
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: 
+    linear-gradient(rgba(88, 166, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.orbCyan {
+  top: 20%;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: rgba(34, 211, 238, 0.15);
+}
+
+.orbPurple {
+  bottom: 20%;
+  right: 20%;
+  width: 400px;
+  height: 400px;
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.orbPink {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: rgba(236, 72, 153, 0.08);
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.textContent {
+  text-align: center;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(88, 166, 255, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  border-radius: 50px;
+  margin-bottom: 28px;
+}
+
+.liveDot {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.liveDotPing {
+  position: absolute;
+  inset: 0;
+  background: #3fb950;
+  border-radius: 50%;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.liveDotCore {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #3fb950;
+  border-radius: 50%;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.badgeText {
+  font-size: 14px;
+  font-weight: 500;
+  color: #58a6ff;
+}
+
+/* Title */
+.title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 72px;
+  }
+}
+
+.titleGradient {
+  background: linear-gradient(90deg, #22d3ee, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 18px;
+  color: #8b949e;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 22px;
+  }
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.statDivider {
+  display: none;
+  width: 1px;
+  height: 48px;
+  background: rgba(48, 54, 61, 0.8);
+}
+
+@media (min-width: 640px) {
+  .statDivider {
+    display: block;
+  }
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6b7280;
+  z-index: 5;
+}
+
+.scrollText {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.scrollIcon {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,281 @@
+.chartContainer {
+  --candle-up: #22c55e;
+  --candle-up-border: #16a34a;
+  --candle-down: #ef4444;
+  --candle-down-border: #dc2626;
+  --chart-line: #58a6ff;
+  --text-muted: #9ca3af;
+  --text-secondary: #e5e7eb;
+  background: linear-gradient(145deg, #161b22, #1a1f27);
+  border: 1px solid rgba(48, 54, 61, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.chartTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.chartLegend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.legendGreen {
+  background: var(--candle-up);
+}
+
+.legendRed {
+  background: var(--candle-down);
+}
+
+.legendText {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.controlsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.coinTabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.coinTab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(48, 54, 61, 0.4);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8b949e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.coinTab:hover {
+  background: rgba(48, 54, 61, 0.6);
+  color: #ffffff;
+}
+
+.coinTabActive {
+  background: rgba(88, 166, 255, 0.15);
+  border-color: rgba(88, 166, 255, 0.35);
+  color: #58a6ff;
+}
+
+.coinTabIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.intervalTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.intervalTab {
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(48, 54, 61, 0.5);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 32px;
+}
+
+.intervalTab:hover:not(:disabled) {
+  color: #ffffff;
+  background: rgba(48, 54, 61, 0.7);
+}
+
+.intervalTabActive {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #22c55e;
+}
+
+.intervalTab:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.chartWrapper {
+  height: 420px;
+  width: 100%;
+  min-height: 320px;
+}
+
+.grid {
+  stroke: rgba(48, 54, 61, 0.5);
+}
+
+.axis {
+  stroke: var(--text-muted);
+}
+
+.loadingOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22, 27, 34, 0.85);
+  border-radius: 16px;
+  z-index: 2;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #6b7280;
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.emptyText {
+  font-size: 15px;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 24px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(88, 166, 255, 0.2);
+  border-top-color: #58a6ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.loadingSubtext {
+  font-size: 12px;
+  color: #484f58;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.chartInfo {
+  text-align: center;
+  font-size: 12px;
+  color: #58a6ff;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  background: rgba(88, 166, 255, 0.08);
+  border-radius: 8px;
+}
+
+/* Tooltip */
+.tooltip {
+  background: rgba(22, 27, 34, 0.97) !important;
+  border: 1px solid rgba(48, 54, 61, 0.9) !important;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+.tooltipLabel {
+  font-size: 11px;
+  color: #8b949e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tooltipRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.tooltipKey {
+  color: #8b949e;
+  font-weight: 500;
+}
+
+.tooltipValue {
+  color: #ffffff;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.tooltipUp {
+  color: #22c55e;
+}
+
+.tooltipDown {
+  color: #ef4444;
+}

@@ -1,0 +1,189 @@
+.container {
+  min-height: 100vh;
+  background: #0d1117;
+}
+
+.mainContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* Section Header */
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .sectionHeader {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.sectionSubtitle {
+  font-size: 15px;
+  color: #8b949e;
+}
+
+.selectionInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.selectionCount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selectionLabel {
+  font-size: 14px;
+  color: #8b949e;
+}
+
+.selectionValue {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.selectionNormal {
+  color: #58a6ff;
+}
+
+.selectionFull {
+  color: #d29922;
+}
+
+.selectedCoinsAvatars {
+  display: flex;
+  margin-left: -8px;
+}
+
+.coinAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #0d1117;
+  margin-left: -8px;
+  transition: transform 0.2s ease;
+}
+
+.coinAvatar:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* Coins Grid */
+.coinsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 576px) {
+  .coinsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .coinsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .coinsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+/* Error State */
+.errorContainer {
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+}
+
+.errorIcon {
+  width: 56px;
+  height: 56px;
+  color: #f85149;
+  margin: 0 auto 20px;
+}
+
+.errorTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f85149;
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  font-size: 15px;
+  color: #8b949e;
+  margin-bottom: 24px;
+}
+
+.retryBtn {
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #58a6ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retryBtn:hover {
+  background: #79b8ff;
+}
+
+/* No Results */
+.noResults {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.noResultsIcon {
+  width: 64px;
+  height: 64px;
+  color: #484f58;
+  margin: 0 auto 20px;
+}
+
+.noResultsTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8b949e;
+  margin-bottom: 8px;
+}
+
+.noResultsText {
+  font-size: 15px;
+  color: #484f58;
+}
